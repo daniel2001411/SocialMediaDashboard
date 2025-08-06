@@ -1,0 +1,95 @@
+.sidebar {
+  width: 250px;
+  background-color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-logo {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-logo h1 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--gray-color);
+}
+
+.sidebar-nav li:hover {
+  background-color: #f5f7fb;
+  color: var(--primary-color);
+}
+
+.sidebar-nav li.active {
+  background-color: rgba(67, 97, 238, 0.1);
+  color: var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+}
+
+.sidebar-nav li span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .sidebar-logo h1 {
+    font-size: 0;
+  }
+  
+  .sidebar-logo h1::after {
+    content: "SD";
+    font-size: 1.5rem;
+  }
+  
+  .sidebar-nav li span {
+    display: none;
+  }
+  
+  .logout-btn span {
+    display: none;
+  }
+}
