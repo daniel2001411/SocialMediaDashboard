@@ -56,7 +56,6 @@
   height: 24px;
 }
 
-/* Different colors for different stats */
 .stats-card:nth-child(1) .stats-icon {
   background-color: var(--primary-color);
 }
